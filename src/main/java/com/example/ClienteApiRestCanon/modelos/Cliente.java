@@ -1,6 +1,14 @@
 package com.example.ClienteApiRestCanon.modelos;
 
 import jakarta.persistence.*;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+import org.springframework.cglib.core.Local;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,8 +28,13 @@ public class Cliente {
     @Column
     private String apellido;
 
-    @Column
-    private int anios;
+
+    @Temporal(TemporalType.DATE)
+    @Column(name = "fecha_nacimiento")
+    @JsonIgnore
+    private LocalDate fechaNacimiento;
+
+    private int edad;
 
     public Long getId() {
         return id;
@@ -47,14 +60,18 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public int getAnios() {
-        return anios;
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setAnios(int anios) {
-        this.anios = anios;
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    public int getEdad() {
+        return edad;
     }
 
-    
-
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 }

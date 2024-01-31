@@ -4,5 +4,6 @@ CREATE TABLE CLIENTE (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(75) NOT NULL,
     apellido VARCHAR(75) NOT NULL,
-    anios INT NOT NULL
+    fecha_nacimiento DATE NOT NULL
+
 );

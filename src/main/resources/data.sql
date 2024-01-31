@@ -1,4 +1,4 @@
-INSERT INTO CLIENTE (nombre, apellido, anios) VALUES
-    ('John', 'Doe', 12),
-    ('Jane', 'Smith', 18),
-    ('Bob', 'Johnson', 22);
+INSERT INTO CLIENTE (nombre, apellido, fecha_nacimiento) VALUES
+    ('John', 'Doe', '2010-01-01'),
+    ('Jane', 'Smith', '2000-09-05'),
+    ('Bob', 'Johnson', '2004-02-15');
